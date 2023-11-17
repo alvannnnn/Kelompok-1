@@ -6,6 +6,6 @@ import searchReducers from "./reducers/searchReducers";
 export default configureStore({
   reducer: rootReducers,
   search: searchReducers,
-  devTools: import.meta.VITE_MODE !== "production",
+  devTools: import.meta.env.VITE_MODE !== "production",
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
 });
